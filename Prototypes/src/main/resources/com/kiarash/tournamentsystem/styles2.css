@@ -1,0 +1,102 @@
+/* === GLOBAL RESET === */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #f5f7fa, #e4e7ec);
+}
+
+/* === TITLES === */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+}
+
+.label.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+}
+
+/* === BUTTONS === */
+.button {
+    -fx-background-color: #0984e3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 18;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 1, 1);
+}
+
+.button:hover {
+    -fx-background-color: #74b9ff;
+}
+
+.button:pressed {
+    -fx-background-color: #40739e;
+}
+
+/* Green and Secondary Variants */
+.button.green {
+    -fx-background-color: #00b894;
+}
+
+.button.green:hover {
+    -fx-background-color: #55efc4;
+}
+
+.button.secondary {
+    -fx-background-color: #636e72;
+}
+
+/* === TABLE STYLING === */
+.table-view {
+    -fx-border-color: #dfe6e9;
+    -fx-background-color: white;
+    -fx-font-size: 13px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #dfe6e9;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #dfe6e9;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-font-size: 13px;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8 5 8 5;
+    -fx-alignment: CENTER;
+}
+
+/* === INPUT FIELDS === */
+.text-field, .combo-box {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #b2bec3;
+    -fx-padding: 6;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #0984e3;
+    -fx-effect: dropshadow(three-pass-box, rgba(9,132,227,0.2), 5, 0, 0, 2);
+}
+
+/* === SPACING + CARD-LIKE CONTAINERS === */
+.vbox, .hbox {
+    -fx-spacing: 12;
+}
+
+.card {
+    -fx-background-color: #ffffff;
+    -fx-padding: 16;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 2, 2);
+}

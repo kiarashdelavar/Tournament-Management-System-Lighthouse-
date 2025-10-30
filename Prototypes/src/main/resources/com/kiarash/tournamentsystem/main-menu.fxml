@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.kiarash.tournamentsystem.MainMenuController" prefWidth="600" prefHeight="400">
+    <VBox spacing="20" alignment="CENTER" layoutX="150" layoutY="100">
+        <Label text="🏆 Tournament System" style="-fx-font-size: 24px; -fx-text-fill: #2b67f6;"/>
+
+        <Button text="➕ Register Team" onAction="#goToRegister" prefWidth="200"/>
+        <Button text="📋 View Teams" onAction="#goToView" prefWidth="200"/>
+        <Button fx:id="scoreButton" text="🏅 Enter Scores" onAction="#goToScoreEntry"/>
+
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,43 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #fff8dc, #ffeaa7); /* gold vibes */
+}
+
+.label.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+    -fx-graphic-text-gap: 10;
+}
+
+.label.subtitle {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6d4c41;
+}
+
+.label.team {
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-text-fill: #2d3436;
+    -fx-padding: 4 0 4 0;
+    -fx-opacity: 0;
+    -fx-translate-x: -20;
+}
+
+.label.team.animate {
+    -fx-opacity: 1;
+    -fx-translate-x: 0;
+    -fx-transition: all 1s ease-in;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #0984e3;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #74b9ff;
+}

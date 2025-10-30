@@ -1,0 +1,31 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #121212;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+}
+
+.button.green {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+.button.secondary {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+}
+
+.table-view {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: white;
+    -fx-table-cell-border-color: gray;
+}

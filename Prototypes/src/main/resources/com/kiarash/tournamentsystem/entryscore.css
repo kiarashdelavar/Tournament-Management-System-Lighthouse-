@@ -1,0 +1,17 @@
+.label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+}
+
+.combo-box, .text-field {
+    -fx-font-size: 13px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.kiarash.tournamentsystem.NextRoundController"
+            stylesheets="@nextround.css">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10" padding="20.0">
+            <Label text="🏆 Next Round Selection" styleClass="label-title"/>
+            <Label text="Select the top teams advancing to the next round:"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" padding="20.0">
+            <TableView fx:id="standingsTable" prefHeight="200" maxWidth="600">
+                <columns>
+                    <TableColumn fx:id="rankCol" text="Rank"/>
+                    <TableColumn fx:id="teamCol" text="Team"/>
+                    <TableColumn fx:id="playedCol" text="Played"/>
+                    <TableColumn fx:id="winCol" text="Wins"/>
+                    <TableColumn fx:id="lossCol" text="Losses"/>
+                    <TableColumn fx:id="pointsCol" text="Points"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <ComboBox fx:id="team1Box" promptText="Team 1"/>
+                <ComboBox fx:id="team2Box" promptText="Team 2"/>
+                <ComboBox fx:id="team3Box" promptText="Team 3"/>
+                <ComboBox fx:id="team4Box" promptText="Team 4"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" alignment="CENTER" padding="20.0">
+            <Button text="Confirm" onAction="#handleConfirm"/>
+        </VBox>
+    </bottom>
+</BorderPane>

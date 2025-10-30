@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.kiarash.tournamentsystem.RegisterTeamController"
+            prefWidth="800" prefHeight="600">
+    <children>
+        <VBox spacing="15" alignment="CENTER" layoutX="150" layoutY="100">
+            <Label text="🏆 Tournament Team Registration" style="-fx-font-size: 24px; -fx-text-fill: #2b67f6;" />
+
+            <HBox spacing="10">
+                <Label text="👥 Team Name:"/>
+                <TextField fx:id="teamNameField" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="🏆 Select Team Icon:"/>
+                <ComboBox fx:id="teamIconBox" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="✉️ Contact Email:"/>
+                <TextField fx:id="emailField" prefWidth="200"/>
+            </HBox>
+
+            <Button fx:id="submitButton"
+                    text="✔ Submit"
+                    onAction="#handleSubmit"
+                    style="-fx-background-color: #2b67f6; -fx-text-fill: white;"/>
+
+            <Button fx:id="viewTeamsButton"
+                    text="🟩 View Registered Teams"
+                    onAction="#handleViewTeams"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+        </VBox>
+    </children>
+</AnchorPane>

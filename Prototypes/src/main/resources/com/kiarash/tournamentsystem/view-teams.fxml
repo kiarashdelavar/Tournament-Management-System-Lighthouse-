@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.kiarash.tournamentsystem.ViewTeamsController"
+      spacing="20" alignment="CENTER" padding="20">
+
+    <Label text="📋 Registered Teams"
+           style="-fx-font-size: 20px; -fx-text-fill: #2b67f6;" />
+
+    <TableView fx:id="teamsTable" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Team Name" prefWidth="150"/>
+            <TableColumn fx:id="sportColumn" text="Sport" prefWidth="150"/>
+            <TableColumn fx:id="emailColumn" text="Contact Email" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- 🔙 Back Button -->
+    <Button text="🔙 Back to Main Menu"
+            onAction="#handleBack"
+            style="-fx-background-color: #bdc3c7; -fx-text-fill: black;"
+            prefWidth="200"/>
+</VBox>

@@ -1,0 +1,233 @@
+Title,Description,Issue ID,URL,State,Author,Author Username,Assignee,Assignee Username,Confidential,Locked,Due Date,Created At (UTC),Updated At (UTC),Closed At (UTC),Milestone,Weight,Labels,Time Estimate,Time Spent,Epic ID,Epic Title
+#2 PBI: Automatic Match Scheduling,"As an organizer, I want the system to create the match schedule automatically.
+
+---
+
+### Acceptance Criteria:
+- [x] Round-robin logic for group stage matches.
+- [x] Knockout structure created after pools.
+- [x] Each team has an equal number of games.
+- [x] Schedule saved to `schedule.csv`.
+
+---
+
+### Related Requirements:
+- U2.1: Auto schedule creation
+- S2.1: Use pools and knockout rounds
+
+---
+
+### Component:
+Backend (scheduling logic) + Frontend (schedule.fxml)
+
+---
+
+### Quality Requirements (QRs):
+- Q1.2: Must work offline
+- Q4.1: Schedule generated in under 5 seconds
+- Q5.1: Adapts if teams don’t show up",2,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/2,Open,Kiarash Delavar,kiarash.delavar,Kiarash Delavar,kiarash.delavar,No,No,2025-04-28,2025-04-02 12:33:19,2025-04-02 13:25:43,,,3,"Estimate: 3,Priority: High,Requirement",0,0,,
+#3 PBI: Real-Time Score Entry,"As an organizer, I want to enter scores during the event so standings update automatically.
+
+---
+
+### Acceptance Criteria:
+- [x] Admin selects match and inputs scores
+- [x] System updates team standings in real time
+- [x] All data stored in `standings.csv`
+- [x] Score editing locked after tournament ends
+
+---
+
+### Related Requirements:
+- U3: Enter live scores
+- S3: Auto update standings
+
+---
+
+### Component:
+Frontend (score-entry.fxml) + Backend (ScoreEntryController.java)
+
+---
+
+### Quality Requirements (QRs):
+- Q1.2: Works offline
+- Q2.2: Scores cannot be edited after end
+- Q6.1: Only admin/coordinator has write access",3,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/3,Open,Kiarash Delavar,kiarash.delavar,Kiarash Delavar,kiarash.delavar,No,No,2025-04-28,2025-04-02 12:40:58,2025-04-02 13:27:58,,,3,"Estimate: 3,Priority: High,Requirement",0,0,,
+#4 PBI: View Team Standings,"As a spectator or player, I want to see team scores and rankings live on a big screen.
+
+---
+
+### Acceptance Criteria:
+- [x] Displays team name, rank, points, wins/losses
+- [x] Standings auto-update from `standings.csv`
+- [x] View is readable from a distance
+
+---
+
+### Related Requirements:
+- U4: View schedule/scores on screen
+- S4: Live display for standings
+
+---
+
+### Component:
+Frontend only (standings.fxml)
+
+---
+
+### Quality Requirements (QRs):
+- Q1.3: Standings auto-refresh every 10 seconds
+- Q3.2: Large font/symbols for readability
+- Q5.2: Multiple users can view without issues",4,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/4,Open,Kiarash Delavar,kiarash.delavar,Kiarash Delavar,kiarash.delavar,No,No,2025-04-30,2025-04-02 12:48:00,2025-04-02 13:29:09,,,3,"Estimate: 3,Priority: High,Requirement",0,0,,
+#5 PBI: Export Schedule as PDF,"As an organizer, I want to export the match schedule to a PDF so I can print and distribute it.
+
+---
+
+### Acceptance Criteria:
+- [x] Export button in UI
+- [x] PDF includes teams, times, and courts
+- [x] File saved locally as `tournament-schedule.pdf`
+
+---
+
+### Related Requirements:
+- U2.1: Match schedule creation
+- S2.1: System logic for organizing matches
+
+---
+
+### Component:
+Backend (PDF generator using OpenPDF) + UI button
+
+---
+
+### Quality Requirements (QRs):
+- Q1.2: Must work without internet
+- Q3.1: Export in 2 clicks
+- Q6.2: Locks schedule after export",5,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/5,Open,Kiarash Delavar,kiarash.delavar,Kiarash Delavar,kiarash.delavar,No,No,2025-04-30,2025-04-02 12:58:37,2025-04-02 13:30:18,,,3,"Estimate: 3,Priority: High,Requirement",0,0,,
+#6 PBI: Decide Next Round Teams,"As an organizer, I want the system to decide which teams move to the next round, so I don’t have to do it manually.
+
+---
+
+### Acceptance Criteria:
+- [x] System ranks teams based on points
+- [x] Displays top 4 teams for the next round
+- [x] Organizer can confirm or change the selection
+
+---
+
+### Related Requirements:
+- U5: Decide which teams move to next round
+- S5: Use rules and points to determine progression
+
+---
+
+### Component:
+Backend logic (ranking) + UI to confirm next round
+
+---
+
+### Quality Requirements (QRs):
+- Q1.2: Should work offline
+- Q3.1: Confirmation process should take less than 3 clicks",6,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/6,Open,Kiarash Delavar,kiarash.delavar,"","",No,No,,2025-04-02 13:16:15,2025-04-02 13:36:14,,,,"Estimate: 3,Priority: High,Requirement",0,0,,
+#1 PBI: Team Registration,"As a school representative, I want to register teams online so we can join the tournament easily.
+
+### Acceptance Criteria:
+- [x] Form allows input of team name, contact email, and team icon.
+- [x] Users can add 2–5 players per team.
+- [x] Validation for empty/duplicate team names and email.
+- [x] Data is stored in `teams.csv`.
+
+
+### Related Requirements:
+- U1.1: Online team registration
+- S1.1: System provides form for registration
+
+---
+
+### Component:
+Frontend (register-team.fxml) + Backend (RegisterTeamController.java)
+
+---
+
+### Quality Requirements (QRs):
+- Q1.2: Must work offline (no internet required)
+- Q3.1: Form actions can be completed in ≤ 3 clicks
+- Q3.2: Accessible design for all users",7,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/7,Open,Kiarash Delavar,kiarash.delavar,"","",No,No,,2025-04-02 13:20:06,2025-04-02 13:37:22,,,,"Estimate: 3,Priority: High,Requirement",0,0,,
+#7 PBI: Backup Data and Lock Scores,"As an organizer, I want the system to back up scores and prevent changes after the tournament ends to keep results safe.
+
+---
+
+### Acceptance Criteria:
+- [x] Backups are created automatically every hour
+- [x] Organizer can lock the scores after the tournament
+- [x] Locked scores cannot be edited anymore
+
+---
+
+### Related Requirements:
+- Q2.1: Backup every hour to external drive
+- Q2.2: Scores cannot be edited after tournament ends
+
+---
+
+### Component:
+File manager for backup + Lock toggle in UI
+
+---
+
+### Quality Requirements (QRs):
+- Q1.1: System must always work during tournament
+- Q5.2: Must support safe multi-user usage",8,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/8,Open,Kiarash Delavar,kiarash.delavar,"","",No,No,,2025-04-02 13:37:22,2025-04-02 13:39:20,,,,"Estimate: 3,Priority: High,Requirement",0,0,,
+#8 PBI: Show Schedule and Scores on Big Screen,"As a spectator or player, I want to see the schedule and scores on a big screen so I can stay updated during the tournament.
+
+---
+
+### Acceptance Criteria:
+- [x] Standings and match info shown on a separate display
+- [x] Updates automatically as scores are entered
+- [x] Easy to read with big fonts and simple layout
+
+---
+
+### Related Requirements:
+- U4: View schedule and scores
+- S4: Display info on external screen
+
+---
+
+### Component:
+Display page + auto refresh logic
+
+---
+
+### Quality Requirements (QRs):
+- Q1.3: Updates every 10 seconds
+- Q3.2: Easy to read layout
+- Q1.2: Works without internet",9,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/9,Open,Kiarash Delavar,kiarash.delavar,"","",No,No,,2025-04-02 13:39:19,2025-04-02 13:40:46,,,,"Estimate: 3,Priority: High,Requirement",0,0,,
+#9 PBI: Determine Teams for Next Round Automatically,"As an organizer, I want the system to automatically decide which teams move to the next round so I don’t have to calculate it myself.
+
+---
+
+### Acceptance Criteria:
+- [x] System calculates top teams based on points
+- [x] Display selected teams clearly
+- [x] Organizer can confirm or adjust if needed
+
+---
+
+### Related Requirements:
+- U5: Progression decision
+- S5: Use rules and points to determine progression
+
+---
+
+### Component:
+Backend logic + confirmation UI
+
+---
+
+### Quality Requirements (QRs):
+- Q4.1: Should calculate quickly
+- Q5.1: Handles missing teams
+- Q6.2: Locks progression after confirmation",10,https://gitlab.com/saxionnl/hbo-ict/1.3-requirements-engineering/2024-2025/106/-/issues/10,Open,Kiarash Delavar,kiarash.delavar,"","",No,No,,2025-04-02 13:40:44,2025-04-02 13:41:09,,,,"Estimate: 3,Priority: High,Requirement",0,0,,
