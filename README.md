@@ -1,6 +1,7 @@
 # Tournament Management System – The Lighthouse Schools
 
 This project was created as part of the **Requirements Engineering** course at Saxion University of Applied Sciences (April 2025).  
+
 The goal of this assignment was to design and document a complete system for managing sports tournaments between special education schools.
 
 ---
@@ -48,7 +49,7 @@ This project focused on analyzing user needs, defining functional and non-functi
 
 ## Course Context
 
-In the Requirements Engineering course, we learned how to collect, write, and validate requirements for ICT systems.  
+In the Requirements Engineering course, I learned how to collect, write, and validate requirements for ICT systems.  
 The course focuses on preventing the common problem where developers start coding before fully understanding what the client wants.
 
 By using structured methods, we learned to:
